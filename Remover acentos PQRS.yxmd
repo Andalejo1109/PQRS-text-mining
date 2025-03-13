@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Homologaciones PQRS Salud (1).xlsx
+Query=`Hoja1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Fecha" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="Date" />
+            <Field name="Mes" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Año" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Número Radicado" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Estado de PQRS" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Ciclo" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Tipo de Requerimiento" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Contenido de la PQRS" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_WString" />
+            <Field name="Fecha Radicación de caso" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="DateTime" />
+            <Field name="Fecha ingreso PQR" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="DateTime" />
+            <Field name="Equipo Destino" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Equipo Origen" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Origen de  la solicitud" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Motivo Solicitud" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Asunto Solicitud" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Sede asignada" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Sede del Evento" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+            <Field name="Nombre de la tarea" size="255" source="File: D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||`Hoja1$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="174" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Contenido de la PQRS"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">lower</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="318" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DecomposeUnicodeForMatch([Contenido de la PQRS])" field="Contenido de la PQRS" size="255" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Contenido de la PQRS = DecomposeUnicodeForMatch([Contenido de la PQRS])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="510" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">D:\QCSCONS5\Downloads\Homologaciones PQRS Salud (1).xlsx|||Hoja1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Homologaciones PQRS Salud (1).xlsx
+Query=Hoja1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output26" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Remover acentos PQRS</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="73f0dbf0-58e3-4fe8-854d-68a4536d0b31" />
+      <Telemetry>
+        <PreviousWorkflowId value="c0c69aa6-cb3a-448a-bb21-605820ec0543" />
+        <OriginWorkflowId value="73f0dbf0-58e3-4fe8-854d-68a4536d0b31" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
