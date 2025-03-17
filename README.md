@@ -11,6 +11,10 @@ The objective of this project is to analyze PQRS data to understand patient conc
 * **Visualization:** Creating visualizations to represent the analysis results, including word clouds, word counts, and TF-IDF scores.
 * **Dashboard Integration:** Developing interactive dashboards in Power BI to provide a comprehensive view of the analysis.
 
+![Descriptive dashboard](dashboard1.PNG)
+
+![Word cloud dashboard](dashboard2.PNG)
+
 ## Contents
 
 * `NLP company.R`: R script for NLP analysis, potentially tailored to company-specific requirements.
