@@ -13,7 +13,7 @@ The objective of this project is to analyze PQRS data to understand patient conc
 
 ![Descriptive dashboard](dashboard1.PNG)
 
-![Word cloud dashboard](dashboard2.PNG)
+![Word cloud dashboard](Dashboard2.PNG)
 
 ## Contents
 
